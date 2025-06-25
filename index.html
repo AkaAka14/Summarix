@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summarix (Frontend Only)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Summarix</h1>
+    <textarea id="textInput" placeholder="Paste your content here..." rows="10"></textarea>
+
+    <div class="options">
+      <label for="type">Summary Type:</label>
+      <select id="type">
+        <option value="extractive">Extractive</option>
+        <option value="abstractive">Abstractive</option>
+      </select>
+
+      <label for="size">Summary Size:</label>
+      <select id="size">
+        <option value="1">Short</option>
+        <option value="3">Medium</option>
+        <option value="5">Long</option>
+      </select>
+    </div>
+
+    <button onclick="summarize()">Summarize</button>
+
+    <h2>Summary:</h2>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
